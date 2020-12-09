@@ -60,6 +60,38 @@ empathy.description = "This stat represents how well you relate to other living 
                       "Empathy is also a measure of how close he/she is to the line between feeling human being\n" \
                       "and cold blooded cyber-monster."
 
+rockerboy = Attribute("ROLE_RB")
+rockerboy.description = "As a Rockerboy, you have the power to get the people up - to lead, inspier and inform.\n" \
+                        "A song from you can give the timid courage, the weak strength, and the blind vision.\n" \
+                        "Rockerboy legends have led armies against corporations and governments.\n" \
+                        "Rockerboy songs have exposed corruption, brought down dictators. It's a lot of power\n" \
+                        "for a guy doing gigs every night in another city.  But you can handle it.  After all - \n" \
+                        "you canme to play!"
+
+solo = Attribute("ROLE_SOLO")
+solo.description = "You were reborn with a gun in your hand - the flesh and blood hand, not the metallic weapons\n" \
+                   "factory that covers most of your other arm.  Whether as a freelance guard and killer-for-hire\n" \
+                   "or as one of the corporate cybersoldiers that enforce business deals and the company's 'black\n" \
+                   "operations' you're one of the elite fighting machines of the Cyberpunk world."
+
+netrunner = Attribute("ROLE_NET")
+netrunner.description = "Nothing can stop you.  With your direct mental link to the computer, you can plunge " \
+                        "headfirst\n" \
+                        "into the dizzying data-winds of the net; the worldwide telecommunications system that joins\n" \
+                        "humanity together. As an electronic wraith, you are the ultimate 'hacker', your brain wired\n" \
+                        "into special modens and computer links.  You slip into the 'hardest' mainframe system with " \
+                        "ease\n" \
+                        "Your defense and offense programs are arrayed at a touch of your mental fingertips - a quick " \
+                        "jolt\n" \
+                        "of Demon or Vampire and the data fortresses fall.  EBM. ITT. Sony-Matsushita-Ford.  You've " \
+                        "tackled\n" \
+                        "them all, buying, trading and selling their deepest secrets at will."
+
+techies = Attribute("ROLE_TEC")
+techies.description = ""
+
+
+
 CONSOLE_HELP_MESSAGE = "This is the console, the place where you will define the skills of your character.\n" \
                        "There are a few commands you can use to set your characters attributes, these are:\n" \
                        "- describe [attribute]\n" \
@@ -72,4 +104,4 @@ CONSOLE_HELP_MESSAGE = "This is the console, the place where you will define the
                        "2. Distribute your character points: You will have 75 points to distribute across all skills.\n" \
                        "No skill may be lower than 2 or higher than 10.  You can manually distribute these points\n" \
                        "by using set [attribute] [skill] or by typing set random, which will create random rolls for\n" \
-                       "all of your skills.\n" \
+                       "all of your skills.\n"

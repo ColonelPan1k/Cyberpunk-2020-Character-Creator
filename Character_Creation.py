@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 from Attributes import *
+from Tutorial import *
 import random
 
 
@@ -60,7 +61,7 @@ def print_to_character_sheet(character):
     draw_to_image(205, 185, str(character.intellect))
     draw_to_image(237, 237, str(character.reflex))
     draw_to_image(205, 290, str(character.technical))
-    draw_to_image(205, 343, str(character.cool)) # +53
+    draw_to_image(205, 343, str(character.cool))
     draw_to_image(205, 396, str(character.attractiveness))
     draw_to_image(205, 447, str(character.luck))
     draw_to_image(205, 500, str(character.movement))
@@ -70,10 +71,6 @@ def print_to_character_sheet(character):
 
 
 def generate_random_character():
-    print("TODO")
-
-
-def start_creation_process(Object):
     print("TODO")
 
 
@@ -89,23 +86,27 @@ print("Look at you hacker, a pathetic creature of meat and bone\npanting and swe
       "through my corridors.\nHow can you challenge a perfect, immortal machine?\n")
 print("########################################\n")
 
-# Choose a handle
-# print("First you will pick a handle for your character,\n"
-#       "enter your handle now.")
-# newCharacter.handle = input("$> ")
-# print("Your handle has been set to: " + newCharacter.handle)
-
-# print("Next, you will pick a role.\n Your options are: ", *role_list)
-
-# Choose skills
 print("Type 'help' to learn how to use the character creation console")
+
+########################## Debug menu
 if debug:
     quit_command = True
     newCharacter.handle = "Test"
     newCharacter.role = "Netrunner"
     newCharacter.intellect = 10
     print_to_character_sheet(newCharacter)
+###########################
 
+print("Welcome to the Cyberpunk 2020 character synthesis module.\n"
+      "Would you like to begin the tutorial or get to work in the console?")
+response = input("[T]utorial / [W]ork\n"
+                 "$> ")
+
+if response.lower() == "t":
+    start_tutorial(newCharacter)
+    
+
+print("Type 'help' to learn how to use the character creation console")
 while not quit_command:
 
     command = input("$> ").split(" ")
@@ -117,12 +118,11 @@ while not quit_command:
             print("ERROR: Unknown skill " + command[1])
             print("Valid skills are: ", *stat_list)
 
-    elif command[0] == "start":
-        start_creation_process(newCharacter)
-
     elif command[0] == "set":
         if command[1] == "skill":
             exec("newCharacter.%s = %i" % (command[2], int(command[3])))
+            point_total -= int(command[3])
+            print("You have %i points left to distribute" % point_total)
         else:
             exec("newCharacter.%s = \"%s\"" % (command[1], command[2]))
 
