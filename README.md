@@ -1,7 +1,6 @@
 # Cyberpunk-2020-Character-Creator
-This is a little thing I made to make Cyberpunk 2020 character creation a bit easier.  I had a bit of fun and made a very basic console-type system to 
-allocate skill points.  So far there is no real in-program tutorial, but I'm trying to figure out the best way to implement that without it being
-too cumbersome.  This code is quite messy, I'll get around to cleaning it up as soon as I have some spare time. 
+This is a little thing I made to make Cyberpunk 2020 character creation a bit easier.  I had a bit of fun and made a very basic REPL to allocate skill points and 
+set different character values.  In the future, I'd like to add some kind of scripted tutorial. I'm also reworking the REPL loop to be much cleaner.
 
 # Use
 For now, there are a few commands that can be used.  
